@@ -28,12 +28,12 @@
       <div class="card mb-3">
          <div class="card-body">
            <h5 class="card-title"><%= campground.title%></h5>
-           <p class="card-text"><%= campground.description%></p>
+           <p class="card-text fst-italic"><%= campground.description%></p>
          </div>
          <ul class="list-group list-group-flush">
            <li class="list-group-item text-muted"><%= campground.location%></li>
            <li class="list-group-item">Submitted by <%= campground.author.username%></li>
-           <li class="list-group-item">$<%= campground.price%>/night</li>
+           <li class="list-group-item">$ <%= campground.price%> /night</li>
          </ul>
          
          <% if(currentUser && campground.author.equals(currentUser._id)) { %>
@@ -45,9 +45,8 @@
          </div>
          <% } %>
          
-      
          <div class="card-footer text-muted">
-            2 days ago
+            Lastest Review: <%= new Date().getDate();%>/<%= new Date().getMonth();%>/<%= new Date().getFullYear();%>
         </div>
        </div>
    </div>
@@ -94,7 +93,7 @@
            <p class="starability-result" data-rating="<%=review.rating%>">
             Rated: <%= review.rating %> stars
            </p>
-           <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.uthor.username%></h6> -->
+          
            <p class="card-text">Review: <%= review.body %></p>
            <%  if( currentUser && review.author.equals(currentUser._id))  {%>
            <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
