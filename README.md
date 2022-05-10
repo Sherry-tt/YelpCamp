@@ -9,12 +9,12 @@ YelpCamp is a full stack  web application, where users can share and post their 
 * Create, edit and delete posts.
 * Upload campground Images and update feature.
 * Create, edit and delete comments.
-* See and review existing campgrounds.
+* View and rate existing campgrounds.
 
 
 ### Tools and Technologies
 * <strong>Front-end: </strong>HTML5, CSS3, JavaScript, Bootstrap 5,  AJAX
-* <strong>Back-end: </strong>Node.js, Express, MongoDB (Mongo Atlas)
+* <strong>Back-end: </strong>Node.js, Express, REST API, MongoDB (Mongo Atlas)
 * <strong>User Authentification & Authorization: </strong>Passport.js
 * <strong>Map & Geocoding: </strong>Mapbox
 * <strong>Image Upload: </strong>Cloudinary
